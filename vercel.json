@@ -10,11 +10,11 @@
     },
     {
       "source": "/portfolio-dashboard",
-      "destination": "https://vite-react-psi-weld-82.vercel.app/"
+      "destination": "https://portfolio-dashboard-two-pearl.vercel.app/"
     },
     {
       "source": "/portfolio-dashboard/:path*",
-      "destination": "https://vite-react-psi-weld-82.vercel.app/:path*"
+      "destination": "https://portfolio-dashboard-two-pearl.vercel.app/:path*"
     },
     {
       "source": "/fund-dashboard",
