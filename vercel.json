@@ -1,28 +1,35 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/custom-portfolio",
-      "destination": "https://custom-portfolio-omega.vercel.app/"
-    },
+      "source": "/portfolio-dashboard",
+      "destination": "/portfolio-dashboard/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/custom-portfolio/:path*",
       "destination": "https://custom-portfolio-omega.vercel.app/:path*"
     },
     {
-      "source": "/portfolio-dashboard",
-      "destination": "https://portfolio-dashboard-two-pearl.vercel.app/"
+      "source": "/custom-portfolio",
+      "destination": "https://custom-portfolio-omega.vercel.app/"
     },
     {
       "source": "/portfolio-dashboard/:path*",
       "destination": "https://portfolio-dashboard-two-pearl.vercel.app/:path*"
     },
     {
-      "source": "/fund-dashboard",
-      "destination": "https://fund-dashboard-coral.vercel.app/"
+      "source": "/portfolio-dashboard/",
+      "destination": "https://portfolio-dashboard-two-pearl.vercel.app/"
     },
     {
       "source": "/fund-dashboard/:path*",
       "destination": "https://fund-dashboard-coral.vercel.app/:path*"
+    },
+    {
+      "source": "/fund-dashboard",
+      "destination": "https://fund-dashboard-coral.vercel.app/"
     }
   ]
 }
