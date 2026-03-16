@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AS Hobby Labs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-1: #f5f8ff;
+        --bg-2: #eef5f3;
+        --ink: #0f172a;
+        --muted: #475569;
+        --card: #ffffff;
+        --line: #dbe5ef;
+        --accent-a: #0f766e;
+        --accent-b: #1d4ed8;
+        --accent-c: #7c3aed;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 15% -20%, #c7d2fe 0%, transparent 60%),
+          radial-gradient(900px 500px at 95% 10%, #a7f3d0 0%, transparent 60%),
+          linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        min-height: 100vh;
+      }
+
+      .shell {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 56px 20px 36px;
+      }
+
+      .hero {
+        margin-bottom: 28px;
+      }
+
+      .topnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 26px;
+      }
+
+      .topnav a {
+        text-decoration: none;
+        color: #0f172a;
+        border: 1px solid #cbd5e1;
+        background: rgba(255, 255, 255, 0.75);
+        padding: 8px 11px;
+        border-radius: 999px;
+        font: 600 13px/1 "JetBrains Mono", monospace;
+      }
+
+      .topnav a:hover {
+        background: #ffffff;
+      }
+
+      .topnav a.active {
+        color: #ffffff;
+        border-color: transparent;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+      }
+
+      .eyebrow {
+        font: 600 12px/1 "JetBrains Mono", monospace;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #0b3f63;
+      }
+
+      h1 {
+        margin: 10px 0 8px;
+        font-size: clamp(32px, 4vw, 52px);
+        line-height: 1.05;
+      }
+
+      .sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        max-width: 750px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        grid-column: span 12;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+      }
+
+      @media (min-width: 860px) {
+        .card { grid-column: span 4; }
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 999px;
+        font: 600 11px/1 "JetBrains Mono", monospace;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .a { background: #d1fae5; color: #065f46; }
+      .b { background: #dbeafe; color: #1e40af; }
+      .c { background: #ede9fe; color: #5b21b6; }
+
+      .title {
+        margin: 12px 0 8px;
+        font-size: 20px;
+      }
+
+      .desc {
+        margin: 0 0 18px;
+        color: var(--muted);
+        min-height: 68px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        text-decoration: none;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        padding: 10px 13px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #0f172a;
+        background: #fff;
+      }
+
+      .btn:hover { background: #f8fafc; }
+
+      .btn.main {
+        color: #fff;
+        border: none;
+      }
+
+      .btn.a { background: linear-gradient(135deg, #0f766e, #0f766e); }
+      .btn.b { background: linear-gradient(135deg, #1d4ed8, #1d4ed8); }
+      .btn.c { background: linear-gradient(135deg, #6d28d9, #7c3aed); }
+
+      .foot {
+        margin-top: 20px;
+        color: #64748b;
+        font: 500 12px/1.4 "JetBrains Mono", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="topnav">
+        <a id="nav-home" href="/">Home</a>
+        <a id="nav-custom" href="/custom-portfolio">Custom Portfolio</a>
+        <a id="nav-portfolio" href="/portfolio-dashboard">Portfolio Dashboard</a>
+        <a id="nav-fund" href="/fund-dashboard">Fund Dashboard</a>
+      </nav>
+
+      <header class="hero">
+        <div class="eyebrow">AS Hobby Labs</div>
+        <h1>Three portfolio labs, one home.</h1>
+        <p class="sub">
+          Pick an app below. Each module keeps its own workflows and data model, while this homepage acts as your clean launcher.
+        </p>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <span class="tag a">Custom Portfolio</span>
+          <h2 class="title">Custom Portfolio Lab</h2>
+          <p class="desc">
+            Monte Carlo optimizer with live quote overlays, risk/return diagnostics, and portfolio construction experiments.
+          </p>
+          <div class="actions">
+            <a class="btn main a" href="/custom-portfolio" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="btn" href="https://custom-portfolio-omega.vercel.app">Direct URL</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag b">Portfolio Dashboard</span>
+          <h2 class="title">Portfolio Dashboard</h2>
+          <p class="desc">
+            Allocation modeling and dashboard analytics with historical + live market data integration.
+          </p>
+          <div class="actions">
+            <a class="btn main b" href="/portfolio-dashboard" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="btn" href="https://vite-react-psi-weld-82.vercel.app">Direct URL</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag c">Fund Dashboard</span>
+          <h2 class="title">Fund Dashboard</h2>
+          <p class="desc">
+            CIO-style positions, conviction controls, risk checks, and operating guardrails for active portfolio management.
+          </p>
+          <div class="actions">
+            <a class="btn main c" href="/fund-dashboard" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="btn" href="https://fund-dashboard-coral.vercel.app">Direct URL</a>
+          </div>
+        </article>
+      </section>
+
+      <p class="foot">
+        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code>
+      </p>
+    </main>
+
+    <script>
+      (function () {
+        var path = window.location.pathname || "/";
+        var map = [
+          ["/", "nav-home"],
+          ["/custom-portfolio", "nav-custom"],
+          ["/portfolio-dashboard", "nav-portfolio"],
+          ["/fund-dashboard", "nav-fund"],
+        ];
+        var matched = "nav-home";
+        for (var i = 0; i < map.length; i++) {
+          if (path === map[i][0] || path.indexOf(map[i][0] + "/") === 0) {
+            matched = map[i][1];
+            break;
+          }
+        }
+        var el = document.getElementById(matched);
+        if (el) el.classList.add("active");
+      })();
+    </script>
+  </body>
+</html>
