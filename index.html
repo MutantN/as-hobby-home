@@ -125,6 +125,7 @@
       .b { background: #dbeafe; color: #1e40af; }
       .c { background: #ede9fe; color: #5b21b6; }
       .d { background: #fee2e2; color: #991b1b; }
+      .e { background: #fef3c7; color: #92400e; }
 
       .title {
         margin: 12px 0 8px;
@@ -165,6 +166,7 @@
       .btn.b { background: linear-gradient(135deg, #1d4ed8, #1d4ed8); }
       .btn.c { background: linear-gradient(135deg, #6d28d9, #7c3aed); }
       .btn.d { background: linear-gradient(135deg, #b91c1c, #dc2626); }
+      .btn.e { background: linear-gradient(135deg, #b45309, #d97706); }
 
       .foot {
         margin-top: 20px;
@@ -181,11 +183,12 @@
         <a id="nav-portfolio" href="/portfolio-dashboard">Portfolio Dashboard</a>
         <a id="nav-fund" href="/fund-dashboard">Fund Dashboard</a>
         <a id="nav-credit" href="/credit-conc-risk">Credit Concentration Risk</a>
+        <a id="nav-doco" href="https://portfolio-doco.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio Docs</a>
       </nav>
 
       <header class="hero">
         <div class="eyebrow">AS Hobby Labs</div>
-        <h1>Four portfolio labs, one home.</h1>
+        <h1>Five portfolio labs, one home.</h1>
         <p class="sub">
           Pick an app below. Each module keeps its own workflows and data model, while this homepage acts as your clean launcher.
         </p>
@@ -239,10 +242,22 @@
             <a class="btn" href="https://credit-conc-risk.vercel.app">Direct URL</a>
           </div>
         </article>
+
+        <article class="card">
+          <span class="tag e">Docs</span>
+          <h2 class="title">Portfolio Dashboard Docs</h2>
+          <p class="desc">
+            HTML documentation for the production portfolio dashboard, including architecture, theory, API notes, quick start, and Monte Carlo behavior.
+          </p>
+          <div class="actions">
+            <a class="btn main e" href="https://portfolio-doco.vercel.app" target="_blank" rel="noopener noreferrer">Open Docs</a>
+            <a class="btn" href="https://portfolio-doco.vercel.app/00_project_overview.html" target="_blank" rel="noopener noreferrer">Overview</a>
+          </div>
+        </article>
       </section>
 
       <p class="foot">
-        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code> • <code>/credit-conc-risk</code>
+        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code> • <code>/credit-conc-risk</code> • docs via <code>portfolio-doco.vercel.app</code>
       </p>
     </main>
 
