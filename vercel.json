@@ -4,6 +4,11 @@
       "source": "/portfolio-dashboard",
       "destination": "/portfolio-dashboard/",
       "permanent": false
+    },
+    {
+      "source": "/credit-conc-risk",
+      "destination": "/credit-conc-risk/",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -22,6 +27,14 @@
     {
       "source": "/portfolio-dashboard/",
       "destination": "https://portfolio-dashboard-two-pearl.vercel.app/"
+    },
+    {
+      "source": "/credit-conc-risk/:path*",
+      "destination": "https://credit-conc-risk.vercel.app/:path*"
+    },
+    {
+      "source": "/credit-conc-risk/",
+      "destination": "https://credit-conc-risk.vercel.app/"
     },
     {
       "source": "/fund-dashboard/:path*",

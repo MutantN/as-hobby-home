@@ -124,6 +124,7 @@
       .a { background: #d1fae5; color: #065f46; }
       .b { background: #dbeafe; color: #1e40af; }
       .c { background: #ede9fe; color: #5b21b6; }
+      .d { background: #fee2e2; color: #991b1b; }
 
       .title {
         margin: 12px 0 8px;
@@ -163,6 +164,7 @@
       .btn.a { background: linear-gradient(135deg, #0f766e, #0f766e); }
       .btn.b { background: linear-gradient(135deg, #1d4ed8, #1d4ed8); }
       .btn.c { background: linear-gradient(135deg, #6d28d9, #7c3aed); }
+      .btn.d { background: linear-gradient(135deg, #b91c1c, #dc2626); }
 
       .foot {
         margin-top: 20px;
@@ -178,11 +180,12 @@
         <a id="nav-custom" href="/custom-portfolio">Custom Portfolio</a>
         <a id="nav-portfolio" href="/portfolio-dashboard">Portfolio Dashboard</a>
         <a id="nav-fund" href="/fund-dashboard">Fund Dashboard</a>
+        <a id="nav-credit" href="/credit-conc-risk">Credit Concentration Risk</a>
       </nav>
 
       <header class="hero">
         <div class="eyebrow">AS Hobby Labs</div>
-        <h1>Three portfolio labs, one home.</h1>
+        <h1>Four portfolio labs, one home.</h1>
         <p class="sub">
           Pick an app below. Each module keeps its own workflows and data model, while this homepage acts as your clean launcher.
         </p>
@@ -224,10 +227,22 @@
             <a class="btn" href="https://fund-dashboard-coral.vercel.app">Direct URL</a>
           </div>
         </article>
+
+        <article class="card">
+          <span class="tag d">Credit Risk</span>
+          <h2 class="title">Credit Concentration Risk</h2>
+          <p class="desc">
+            Concentration stress testing and risk visualization for credit portfolios with fast scenario-driven analysis.
+          </p>
+          <div class="actions">
+            <a class="btn main d" href="/credit-conc-risk" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="btn" href="https://credit-conc-risk.vercel.app">Direct URL</a>
+          </div>
+        </article>
       </section>
 
       <p class="foot">
-        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code>
+        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code> • <code>/credit-conc-risk</code>
       </p>
     </main>
 
@@ -239,6 +254,7 @@
           ["/custom-portfolio", "nav-custom"],
           ["/portfolio-dashboard", "nav-portfolio"],
           ["/fund-dashboard", "nav-fund"],
+          ["/credit-conc-risk", "nav-credit"],
         ];
         var matched = "nav-home";
         for (var i = 0; i < map.length; i++) {
