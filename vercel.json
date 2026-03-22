@@ -77,11 +77,11 @@
     },
     {
       "source": "/credit-portfolio-risk-appetite/:path*",
-      "destination": "https://credit-portfolio-risk-appetite-8p25l5ehq-a-ss-projects-081f0f74.vercel.app/:path*"
+      "destination": "https://credit-portfolio-risk-appetite.vercel.app/:path*"
     },
     {
       "source": "/credit-portfolio-risk-appetite/",
-      "destination": "https://credit-portfolio-risk-appetite-8p25l5ehq-a-ss-projects-081f0f74.vercel.app/"
+      "destination": "https://credit-portfolio-risk-appetite.vercel.app/"
     }
   ]
 }
