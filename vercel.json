@@ -14,6 +14,11 @@
       "source": "/portfolio-dashboard-docs",
       "destination": "/portfolio-dashboard-docs/",
       "permanent": false
+    },
+    {
+      "source": "/custom-portfolio-docs",
+      "destination": "/custom-portfolio-docs/",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -48,6 +53,14 @@
     {
       "source": "/portfolio-dashboard-docs/",
       "destination": "https://portfolio-doco.vercel.app/"
+    },
+    {
+      "source": "/custom-portfolio-docs/:path*",
+      "destination": "https://custom-portfolio-doco.vercel.app/:path*"
+    },
+    {
+      "source": "/custom-portfolio-docs/",
+      "destination": "https://custom-portfolio-doco.vercel.app/"
     },
     {
       "source": "/fund-dashboard/:path*",

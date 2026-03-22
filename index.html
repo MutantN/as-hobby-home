@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,188 +6,92 @@
     <title>AS Hobby Labs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg-1: #f5f8ff;
-        --bg-2: #eef5f3;
-        --ink: #0f172a;
-        --muted: #475569;
+        --bg: #f7f8fc;
         --card: #ffffff;
-        --line: #dbe5ef;
-        --accent-a: #0f766e;
-        --accent-b: #1d4ed8;
-        --accent-c: #7c3aed;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --a: #0f766e;
+        --b: #1d4ed8;
+        --c: #6d28d9;
+        --d: #dc2626;
+        --e: #d97706;
+        --f: #0f766e;
       }
-
       * { box-sizing: border-box; }
-
       body {
         margin: 0;
-        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-family: "Inter", system-ui, sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(1200px 600px at 15% -20%, #c7d2fe 0%, transparent 60%),
-          radial-gradient(900px 500px at 95% 10%, #a7f3d0 0%, transparent 60%),
-          linear-gradient(180deg, var(--bg-1), var(--bg-2));
-        min-height: 100vh;
+          radial-gradient(900px 500px at 10% -10%, #dbeafe 0%, transparent 55%),
+          radial-gradient(900px 500px at 100% 0%, #dcfce7 0%, transparent 55%),
+          var(--bg);
       }
-
-      .shell {
-        max-width: 1040px;
-        margin: 0 auto;
-        padding: 56px 20px 36px;
-      }
-
-      .hero {
-        margin-bottom: 28px;
-      }
-
+      .shell { max-width: 1160px; margin: 0 auto; padding: 28px 18px 56px; }
       .topnav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 26px;
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+        padding: 14px 16px; border: 1px solid var(--line); border-radius: 18px;
+        background: rgba(255,255,255,.82); backdrop-filter: blur(10px);
       }
-
       .topnav a {
-        text-decoration: none;
-        color: #0f172a;
-        border: 1px solid #cbd5e1;
-        background: rgba(255, 255, 255, 0.75);
-        padding: 8px 11px;
-        border-radius: 999px;
-        font: 600 13px/1 "JetBrains Mono", monospace;
+        text-decoration: none; color: var(--ink); font-weight: 600; font-size: 14px;
+        padding: 8px 12px; border-radius: 999px; border: 1px solid transparent;
       }
-
-      .topnav a:hover {
-        background: #ffffff;
+      .topnav a:hover, .topnav a.active { background: #eff6ff; border-color: #bfdbfe; }
+      .hero {
+        padding: 30px 4px 22px;
       }
-
-      .topnav a.active {
-        color: #ffffff;
-        border-color: transparent;
-        background: linear-gradient(135deg, #0f172a, #1e293b);
-      }
-
       .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font: 600 12px/1 "JetBrains Mono", monospace;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #0b3f63;
+        display: inline-flex; align-items: center; gap: 10px; padding: 6px 10px;
+        border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid var(--line);
+        color: #0f766e; font: 700 12px/1 "JetBrains Mono", monospace; letter-spacing: .08em;
       }
-
-      .alien-badge {
-        width: 28px;
-        height: 28px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        background: radial-gradient(circle at 35% 30%, #d9f99d, #86efac 58%, #34d399 100%);
-        box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.65), 0 8px 18px rgba(15, 118, 110, 0.18);
-        font-size: 18px;
-      }
-
-      h1 {
-        margin: 10px 0 8px;
-        font-size: clamp(32px, 4vw, 52px);
-        line-height: 1.05;
-      }
-
-      .sub {
-        margin: 0;
-        color: var(--muted);
-        font-size: 18px;
-        max-width: 750px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 14px;
-      }
-
+      .alien-badge { font-size: 16px; }
+      h1 { margin: 18px 0 10px; font-size: clamp(36px, 6vw, 60px); line-height: 1.02; }
+      .sub { max-width: 760px; color: var(--muted); font-size: 18px; line-height: 1.7; margin: 0; }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
       .card {
-        grid-column: span 12;
+        grid-column: span 4;
         background: var(--card);
         border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px;
-        box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+        border-radius: 22px;
+        padding: 20px;
+        box-shadow: 0 18px 40px rgba(15,23,42,.06);
       }
-
-      @media (min-width: 860px) {
-        .card { grid-column: span 4; }
-      }
-
+      @media (max-width: 980px) { .card { grid-column: span 6; } }
+      @media (max-width: 700px) { .card { grid-column: span 12; } }
       .tag {
-        display: inline-block;
-        padding: 4px 8px;
-        border-radius: 999px;
-        font: 600 11px/1 "JetBrains Mono", monospace;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
+        display: inline-flex; align-items: center; gap: 8px; border-radius: 999px;
+        padding: 6px 10px; font: 700 12px/1 "JetBrains Mono", monospace; letter-spacing: .04em;
+        color: #fff;
       }
-
-      .a { background: #d1fae5; color: #065f46; }
-      .b { background: #dbeafe; color: #1e40af; }
-      .c { background: #ede9fe; color: #5b21b6; }
-      .d { background: #fee2e2; color: #991b1b; }
-      .e { background: #fef3c7; color: #92400e; }
-
-      .title {
-        margin: 12px 0 8px;
-        font-size: 20px;
-      }
-
-      .desc {
-        margin: 0 0 18px;
-        color: var(--muted);
-        min-height: 68px;
-      }
-
-      .actions {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
+      .tag.a { background: var(--a); }
+      .tag.b { background: var(--b); }
+      .tag.c { background: var(--c); }
+      .tag.d { background: var(--d); }
+      .tag.e { background: var(--e); }
+      .tag.f { background: var(--f); }
+      .title { margin: 16px 0 8px; font-size: 26px; line-height: 1.15; }
+      .desc { margin: 0; color: var(--muted); line-height: 1.75; min-height: 92px; }
+      .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
       .btn {
-        text-decoration: none;
-        border: 1px solid #cbd5e1;
-        border-radius: 12px;
-        padding: 10px 13px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #0f172a;
+        display: inline-flex; align-items: center; justify-content: center; min-height: 42px;
+        border-radius: 12px; border: 1px solid var(--line); padding: 0 14px;
+        text-decoration: none; color: var(--ink); font-weight: 700;
         background: #fff;
       }
-
-      .btn:hover { background: #f8fafc; }
-
-      .btn.main {
-        color: #fff;
-        border: none;
-      }
-
+      .btn.main { color: #fff; border: none; }
       .btn.a { background: linear-gradient(135deg, #0f766e, #0f766e); }
       .btn.b { background: linear-gradient(135deg, #1d4ed8, #1d4ed8); }
       .btn.c { background: linear-gradient(135deg, #6d28d9, #7c3aed); }
       .btn.d { background: linear-gradient(135deg, #b91c1c, #dc2626); }
       .btn.e { background: linear-gradient(135deg, #b45309, #d97706); }
-
-      .foot {
-        margin-top: 20px;
-        color: #64748b;
-        font: 500 12px/1.4 "JetBrains Mono", monospace;
-      }
+      .btn.f { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+      .foot { margin-top: 20px; color: #64748b; font: 500 12px/1.4 "JetBrains Mono", monospace; }
     </style>
   </head>
   <body>
@@ -198,14 +102,15 @@
         <a id="nav-portfolio" href="/portfolio-dashboard">Portfolio Dashboard</a>
         <a id="nav-fund" href="/fund-dashboard">Fund Dashboard</a>
         <a id="nav-credit" href="/credit-conc-risk">Credit Concentration Risk</a>
+        <a id="nav-custom-doco" href="/custom-portfolio-docs" target="_blank" rel="noopener noreferrer">Custom Portfolio Docs</a>
         <a id="nav-doco" href="/portfolio-dashboard-docs" target="_blank" rel="noopener noreferrer">Portfolio Docs</a>
       </nav>
 
       <header class="hero">
         <div class="eyebrow"><span class="alien-badge" aria-hidden="true">👽</span><span>ALIEN SCHAUM HOBBY LABS</span></div>
-        <h1>Five portfolio labs, one home.</h1>
+        <h1>Apps and docs, one home.</h1>
         <p class="sub">
-          Pick an app below. Each module keeps its own workflows and data model, while this homepage acts as your clean launcher.
+          Pick an app or its documentation below. Each module keeps its own workflows and data model, while this homepage acts as the clean launcher.
         </p>
       </header>
 
@@ -214,11 +119,23 @@
           <span class="tag a">Custom Portfolio</span>
           <h2 class="title">Custom Portfolio Lab</h2>
           <p class="desc">
-            Monte Carlo optimizer with live quote overlays, risk/return diagnostics, and portfolio construction experiments.
+            User-specified portfolio optimizer with Monte Carlo and deterministic QP search, live quote overlays, contribution-to-variance diagnostics, and XLSX export.
           </p>
           <div class="actions">
             <a class="btn main a" href="/custom-portfolio" target="_blank" rel="noopener noreferrer">Open App</a>
             <a class="btn" href="https://custom-portfolio-omega.vercel.app">Direct URL</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag f">Docs</span>
+          <h2 class="title">Custom Portfolio Docs</h2>
+          <p class="desc">
+            HTML docs for the live custom portfolio app, covering objectives, deterministic QP math, API notes, VaR, contribution-to-variance interpretation, and export behavior.
+          </p>
+          <div class="actions">
+            <a class="btn main f" href="/custom-portfolio-docs" target="_blank" rel="noopener noreferrer">Open Docs</a>
+            <a class="btn" href="/custom-portfolio-docs/00_project_overview.html" target="_blank" rel="noopener noreferrer">Overview</a>
           </div>
         </article>
 
@@ -231,6 +148,18 @@
           <div class="actions">
             <a class="btn main b" href="/portfolio-dashboard" target="_blank" rel="noopener noreferrer">Open App</a>
             <a class="btn" href="https://vite-react-psi-weld-82.vercel.app">Direct URL</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag e">Docs</span>
+          <h2 class="title">Portfolio Dashboard Docs</h2>
+          <p class="desc">
+            HTML docs for the live portfolio dashboard, covering portfolio objectives, theory, Monte Carlo vs deterministic optimization, API notes, and live-data overlays.
+          </p>
+          <div class="actions">
+            <a class="btn main e" href="/portfolio-dashboard-docs" target="_blank" rel="noopener noreferrer">Open Docs</a>
+            <a class="btn" href="/portfolio-dashboard-docs/00_project_overview.html" target="_blank" rel="noopener noreferrer">Overview</a>
           </div>
         </article>
 
@@ -257,22 +186,10 @@
             <a class="btn" href="https://credit-conc-risk.vercel.app">Direct URL</a>
           </div>
         </article>
-
-        <article class="card">
-          <span class="tag e">Docs</span>
-          <h2 class="title">Portfolio Dashboard Docs</h2>
-          <p class="desc">
-            HTML docs for the live portfolio dashboard, covering portfolio objectives, theory, Monte Carlo vs deterministic optimization, API notes, and live-data overlays.
-          </p>
-          <div class="actions">
-            <a class="btn main e" href="/portfolio-dashboard-docs" target="_blank" rel="noopener noreferrer">Open Docs</a>
-            <a class="btn" href="/portfolio-dashboard-docs/00_project_overview.html" target="_blank" rel="noopener noreferrer">Overview</a>
-          </div>
-        </article>
       </section>
 
       <p class="foot">
-        Domain routes: <code>/custom-portfolio</code> • <code>/portfolio-dashboard</code> • <code>/fund-dashboard</code> • <code>/credit-conc-risk</code> • <code>/portfolio-dashboard-docs</code>
+        Domain routes: <code>/custom-portfolio</code> • <code>/custom-portfolio-docs</code> • <code>/portfolio-dashboard</code> • <code>/portfolio-dashboard-docs</code> • <code>/fund-dashboard</code> • <code>/credit-conc-risk</code>
       </p>
     </main>
 
@@ -285,6 +202,8 @@
           ["/portfolio-dashboard", "nav-portfolio"],
           ["/fund-dashboard", "nav-fund"],
           ["/credit-conc-risk", "nav-credit"],
+          ["/custom-portfolio-docs", "nav-custom-doco"],
+          ["/portfolio-dashboard-docs", "nav-doco"]
         ];
         var matched = "nav-home";
         for (var i = 0; i < map.length; i++) {
@@ -294,7 +213,7 @@
           }
         }
         var el = document.getElementById(matched);
-        if (el) el.classList.add("active");
+        if (el) el.className += " active";
       })();
     </script>
   </body>
