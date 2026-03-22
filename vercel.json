@@ -19,6 +19,11 @@
       "source": "/custom-portfolio-docs",
       "destination": "/custom-portfolio-docs/",
       "permanent": false
+    },
+    {
+      "source": "/credit-portfolio-risk-appetite",
+      "destination": "/credit-portfolio-risk-appetite/",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -69,6 +74,14 @@
     {
       "source": "/fund-dashboard",
       "destination": "https://fund-dashboard-coral.vercel.app/"
+    },
+    {
+      "source": "/credit-portfolio-risk-appetite/:path*",
+      "destination": "https://credit-portfolio-risk-appetite-8p25l5ehq-a-ss-projects-081f0f74.vercel.app/:path*"
+    },
+    {
+      "source": "/credit-portfolio-risk-appetite/",
+      "destination": "https://credit-portfolio-risk-appetite-8p25l5ehq-a-ss-projects-081f0f74.vercel.app/"
     }
   ]
 }
