@@ -9,7 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #f7f8fc;
+        --bg: #eef4ff;
+        --bg-soft: #f6fbf2;
+        --wash-a: rgba(59, 130, 246, 0.22);
+        --wash-b: rgba(20, 184, 166, 0.18);
+        --wash-c: rgba(249, 115, 22, 0.16);
+        --wash-d: rgba(168, 85, 247, 0.14);
         --card: #ffffff;
         --ink: #0f172a;
         --muted: #64748b;
@@ -27,9 +32,11 @@
         font-family: "Inter", system-ui, sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(900px 500px at 10% -10%, #dbeafe 0%, transparent 55%),
-          radial-gradient(900px 500px at 100% 0%, #dcfce7 0%, transparent 55%),
-          var(--bg);
+          radial-gradient(960px 560px at 8% -8%, var(--wash-a) 0%, transparent 58%),
+          radial-gradient(880px 520px at 102% 4%, var(--wash-b) 0%, transparent 56%),
+          radial-gradient(720px 460px at 18% 100%, var(--wash-c) 0%, transparent 52%),
+          radial-gradient(760px 520px at 88% 88%, var(--wash-d) 0%, transparent 54%),
+          linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
       }
       .shell { max-width: 1160px; margin: 0 auto; padding: 28px 18px 56px; }
       .topnav {
